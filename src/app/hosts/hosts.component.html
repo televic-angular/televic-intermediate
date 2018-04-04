@@ -1,0 +1,22 @@
+<div appHosts>
+  hosts directive works!
+</div>
+
+<p appHosts>
+  hosts directive works again!
+</p>
+
+<div #hostsWrapperHolder>
+  this is the hosts wrapper div.
+</div>
+
+<div appExportAs message="exported directive A" #exportedA="DirectiveExport">exported directive A</div>
+<div appExportAs message="exported directive B" #exportedB="DirectiveExport">exported directive B</div>
+<ul>
+  <li>
+    <button (click)="exportedA.displayMessage()">exportedA displayMessage</button>
+  </li>
+  <li>
+    <button (click)="exportedB.displayMessage()">exportedB displayMessage</button>
+  </li>
+</ul>

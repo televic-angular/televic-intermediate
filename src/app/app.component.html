@@ -3,18 +3,27 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<nav>
+  <a routerLink="/styling" routerLinkActive="active">1.styling</a>
+  <a routerLink="/styling/inline" routerLinkActive="active">inline</a>
+  <a routerLink="/styling/external" routerLinkActive="active">external</a>
+  <a routerLink="/styling/encapsulation-none" routerLinkActive="active">encapsulation-none</a>
+  <a routerLink="/styling/encapsulation-native" routerLinkActive="active">encapsulation-native</a>
+</nav>
+
+<nav>
+  <a routerLink="/hosts" routerLinkActive="active">2.hosts</a>
+</nav>
+
+<nav>
+  <a routerLink="/transclusion" routerLinkActive="active">3.transclusion</a>
+</nav>
+
+<nav>
+  <a routerLink="/lifecycle-hooks" routerLinkActive="active">4.lifecycle-hooks</a>
+  <a routerLink="/lifecycle-hooks/init-destroy" routerLinkActive="active">init-destroy</a>
+</nav>
+
+<router-outlet></router-outlet>
