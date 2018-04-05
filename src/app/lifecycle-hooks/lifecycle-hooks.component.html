@@ -3,16 +3,20 @@
 </p>
 <router-outlet></router-outlet>
 
-<div class="form">
-  <div class="field">
-    <label>Name</label>
-    <input type="text" #namefld value="{{name}}" (keyup)="setValues(namefld, commentfld)">
+<!--showOnChange: change showOnChange to true to show the form-->
+<div *ngIf="showOnChange">
+  <div class="form">
+    <div class="field">
+      <label>Name</label>
+      <input type="text" #namefld value="{{name}}" (keyup)="setValues(namefld, commentfld)">
+    </div>
+
+    <div class="field">
+      <label>Comment</label>
+      <textarea (keyup)="setValues(namefld, commentfld)" rows="2" #commentfld>{{comment}}</textarea>
+    </div>
   </div>
 
-  <div class="field">
-    <label>Comment</label>
-    <textarea (keyup)="setValues(namefld, commentfld)" rows="2" #commentfld>{{comment}}</textarea>
-  </div>
+  <app-on-changes [name]="name" [comment]="comment"></app-on-changes>
+
 </div>
-
-<app-on-changes [name]="name" [comment]="comment"></app-on-changes>

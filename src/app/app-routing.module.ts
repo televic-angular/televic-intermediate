@@ -7,16 +7,19 @@ import {
 } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { ChangeDetectionComponent } from './change-detection/change-detection.component';
+import { OnPushComponent } from './change-detection/on-push/on-push.component';
+import { DefaultComponent } from './change-detection/default/default.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
-  // {
-  //   path: 'styling',
-  //   component: AppComponent
-  // },
   {
     path: 'lifecycle-hooks',
     loadChildren: './lifecycle-hooks/lifecycle-hooks.module#LifecycleHooksModule'
+  },
+  {
+    path: 'change-detection',
+    component: ChangeDetectionComponent
   },
   {
     path: '',
